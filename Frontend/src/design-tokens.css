@@ -1,0 +1,80 @@
+/* Design Tokens: The Ethereal Clinic (Stitch MCP) */
+:root {
+  /* Colors - Vibrant Vitality Palette */
+  --primary: #0070FF;
+  --primary-container: #568dff;
+  --on-primary: #ffffff;
+  
+  --secondary: #6a1cf6;
+  --secondary-container: #d9caff;
+  
+  --tertiary: #00d2fd;
+  --tertiary-container: #004352;
+  
+  --surface: #f4f6fb;
+  --surface-bright: #f4f6fb;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #eef1f6;
+  --surface-container: #e5e8ee;
+  --surface-container-high: #dfe3e9;
+  --surface-container-highest: #d9dde4;
+  
+  --on-surface: #0f172a;
+  --on-surface-variant: #475569;
+  
+  --outline: #94a3b8;
+  --outline-variant: rgba(148, 163, 184, 0.15); /* Ghost Borders */
+  
+  /* Shadows - Vibrant Glows */
+  --shadow-ambient: 0 40px 80px rgba(0, 112, 255, 0.08); /* Blue-tinted shadow */
+  --shadow-sm: 0 4px 12px rgba(0, 112, 255, 0.04);
+  
+  /* Glassmorphism - Vibrant Recipe */
+  --glass-bg: rgba(255, 255, 255, 0.6);
+  --glass-blur: blur(24px);
+  
+  /* Gradients - High Energy */
+  --gradient-primary: linear-gradient(135deg, #0070FF, #0055c5);
+  --gradient-secondary: linear-gradient(135deg, #6a1cf6, #0070FF);
+  --gradient-soft: linear-gradient(135deg, var(--surface-container-lowest), var(--surface-container-low));
+  
+  /* Spacing */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-4: 1rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  
+  /* Typography Scale */
+  --font-main: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --display-lg: clamp(2.5rem, 5vw, 3.5rem);
+  --headline-sm: 1.5rem;
+  --body-lg: 1.125rem;
+  --label-md: 0.875rem;
+}
+
+/* Base Resets & Typography */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--surface);
+  color: var(--on-surface);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
