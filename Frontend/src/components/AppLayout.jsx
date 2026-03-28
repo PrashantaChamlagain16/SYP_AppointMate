@@ -1,14 +1,23 @@
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../state/AuthContext.jsx";
+import { useUiFeedback } from "../state/UiFeedbackContext.jsx";
 
 export function AppLayout({ children }) {
   const { user, logout } = useAuth();
+  const { showConfirm } = useUiFeedback();
   const navigate = useNavigate();
   const location = useLocation();
   const showPublicLinks = !user || user.role === "patient";
   const showFooterQuickLinks = showPublicLinks && location.pathname !== "/auth";
 
-  const onLogout = () => {
+  const onLogout = async () => {
+    const confirmed = await showConfirm({
+      title: "Log Out",
+      message: "Are you sure you want to log out?",
+      confirmText: "Log Out",
+      cancelText: "Stay Logged In",
+    });
+    if (!confirmed) return;
     logout();
     navigate("/");
   };
