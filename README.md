@@ -5,6 +5,7 @@ AppointMate is a full-stack medical appointment management system with role-base
 ## Core Features
 
 ## Patient
+
 - Register and login
 - Browse approved doctors by name and specialization
 - View doctor profile, consultation fee, and ratings
@@ -13,6 +14,7 @@ AppointMate is a full-stack medical appointment management system with role-base
 - Submit post-appointment reviews
 
 ## Doctor
+
 - Register with professional credentials
 - Wait for admin approval before access
 - Manage profile and consultation fee
@@ -21,6 +23,7 @@ AppointMate is a full-stack medical appointment management system with role-base
 - Track full appointment timeline and reschedule notifications
 
 ## Admin
+
 - Approve pending doctor profiles
 - Block, unblock, and delete users
 - Monitor all appointments in the system
@@ -132,9 +135,3 @@ npm start
 - Doctor accounts must be approved by admin before doctor login is allowed.
 - Payment in current version is validation + record storage (not gateway callback verification).
 - `Backend/utils/emailService.js` is currently a placeholder.
-
-## Important Docs
-
-- Viva guide: [VIVA_WALKTHROUGH.md](./VIVA_WALKTHROUGH.md)
-- ERD guide: [Backend/docs/ERD_WALKTHROUGH.md](./Backend/docs/ERD_WALKTHROUGH.md)
-
